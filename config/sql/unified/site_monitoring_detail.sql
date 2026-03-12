@@ -1,0 +1,36 @@
+SELECT
+    ss.study_site_id,
+    ss.study_id,
+    ss.study_country_id,
+    ss.site_number,
+    ss.site_name,
+    ss.principal_investigator,
+    ss.site_address,
+    ss.city,
+    ss.state_province,
+    ss.postal_code,
+    ss.site_status,
+    ss.site_initiation_date,
+    ss.site_closure_date,
+    ss.target_enrollment    AS site_target_enrollment,
+    ss.actual_enrollment    AS site_actual_enrollment,
+    mv.monitoring_visit_id,
+    mv.visit_code,
+    mv.visit_type,
+    mv.visit_status,
+    mv.planned_start_date,
+    mv.planned_end_date,
+    mv.actual_start_date,
+    mv.actual_end_date,
+    mv.monitor_name,
+    mv.visit_report_status,
+    mv.findings_count,
+    mv.critical_findings_count,
+    mv.follow_up_required,
+    mv.visit_notes,
+    ss.created_date,
+    ss.modified_date
+FROM landing.study_site ss
+INNER JOIN landing.monitoring_visit mv
+    ON ss.study_site_id = mv.study_site_id
+    AND ss.study_id = mv.study_id

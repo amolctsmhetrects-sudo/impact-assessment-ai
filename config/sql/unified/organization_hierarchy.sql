@@ -1,0 +1,21 @@
+SELECT
+    org_id,
+    org_name,
+    org_code,
+    parent_org_id,
+    org_level,
+    org_type,
+    business_unit,
+    division,
+    department,
+    region,
+    country_code,
+    cost_center,
+    manager_name,
+    manager_email,
+    org_status,
+    effective_start_date,
+    effective_end_date,
+    created_date,
+    modified_date
+FROM common.customer.organization_hierarchy

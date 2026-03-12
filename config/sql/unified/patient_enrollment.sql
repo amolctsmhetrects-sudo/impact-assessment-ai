@@ -1,0 +1,20 @@
+SELECT
+    patient_id,
+    study_id,
+    study_site_id,
+    patient_number,
+    gender,
+    date_of_birth,
+    age_at_enrollment,
+    race,
+    ethnicity,
+    consent_date,
+    enrollment_date,
+    randomization_date,
+    randomization_group,
+    enrollment_status,
+    withdrawal_date,
+    withdrawal_reason,
+    created_date,
+    modified_date
+FROM landing.patient_enrollment

@@ -1,0 +1,22 @@
+SELECT
+    cm.customer_id,
+    cm.customer_name,
+    cm.customer_type,
+    cm.customer_code,
+    cm.industry_segment,
+    cm.tax_id,
+    cm.registration_number,
+    cm.primary_contact_name,
+    cm.primary_contact_email,
+    cm.primary_contact_phone,
+    cm.billing_address,
+    cm.shipping_address,
+    cm.city,
+    cm.state_province,
+    cm.country_code,
+    cm.postal_code,
+    cm.customer_status,
+    cm.onboarding_date,
+    cm.created_date,
+    cm.modified_date
+FROM common.customer.customer_master cm

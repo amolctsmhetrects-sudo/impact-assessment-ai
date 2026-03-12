@@ -1,0 +1,174 @@
+{
+  "data_source_name": "drug_dev_set1",
+  "data_source_status": "Y",
+  "description": "Drug Development Clinical Trials - Unified Transformation Set 1",
+  "parallel_job_limit": "10",
+  "notifications": {
+    "success": [
+      "test@novartis.net"
+    ],
+    "failure": [
+      "test@novartis.net"
+    ]
+  },
+  "cluster": {
+    "cluster_type": "",
+    "cluster_name": "",
+    "configuration": {
+      "spark_version": "",
+      "node_type": "",
+      "aws_attributes": {
+        "availability": "",
+        "zone_id": "",
+        "instance_profile_arn": ""
+      },
+      "auto_scale": {
+        "min_workers": "2",
+        "max_workers": "4"
+      },
+      "spark_configuration": {}
+    }
+  },
+  "jobs": [
+    {
+      "job_name": "drug_studies",
+      "schedule": "",
+      "data_quality_check": "Y",
+      "job_type": "HIST",
+      "tag_params": {},
+      "individual_job_params": {
+        "destination_data_path": "/mnt/unified/drug_dev/drug_studies",
+        "source_file_path": "/mnt/landing/drug_dev/drug_studies",
+        "query_file_path": "config/sql/unified/drug_studies.sql",
+        "unified_table_name": "drug_studies",
+        "application": "drug_dev"
+      }
+    },
+    {
+      "job_name": "drug_product",
+      "schedule": "",
+      "data_quality_check": "Y",
+      "job_type": "HIST",
+      "tag_params": {},
+      "individual_job_params": {
+        "destination_data_path": "/mnt/unified/drug_dev/drug_product",
+        "source_file_path": "/mnt/landing/drug_dev/drug_product",
+        "query_file_path": "config/sql/unified/drug_product.sql",
+        "unified_table_name": "drug_product",
+        "application": "drug_dev"
+      }
+    },
+    {
+      "job_name": "adverse_event",
+      "schedule": "",
+      "data_quality_check": "Y",
+      "job_type": "HIST",
+      "tag_params": {},
+      "individual_job_params": {
+        "destination_data_path": "/mnt/unified/drug_dev/adverse_event",
+        "source_file_path": "/mnt/landing/drug_dev/adverse_event",
+        "query_file_path": "config/sql/unified/adverse_event.sql",
+        "unified_table_name": "adverse_event",
+        "application": "drug_dev"
+      }
+    },
+    {
+      "job_name": "patient_enrollment",
+      "schedule": "",
+      "data_quality_check": "Y",
+      "job_type": "HIST",
+      "tag_params": {},
+      "individual_job_params": {
+        "destination_data_path": "/mnt/unified/drug_dev/patient_enrollment",
+        "source_file_path": "/mnt/landing/drug_dev/patient_enrollment",
+        "query_file_path": "config/sql/unified/patient_enrollment.sql",
+        "unified_table_name": "patient_enrollment",
+        "application": "drug_dev"
+      }
+    },
+    {
+      "job_name": "regulatory_submission",
+      "schedule": "",
+      "data_quality_check": "Y",
+      "job_type": "HIST",
+      "tag_params": {},
+      "individual_job_params": {
+        "destination_data_path": "/mnt/unified/drug_dev/regulatory_submission",
+        "source_file_path": "/mnt/landing/drug_dev/regulatory_submission",
+        "query_file_path": "config/sql/unified/regulatory_submission.sql",
+        "unified_table_name": "regulatory_submission",
+        "application": "drug_dev"
+      }
+    },
+    {
+      "job_name": "study_event",
+      "schedule": "",
+      "data_quality_check": "Y",
+      "job_type": "HIST",
+      "tag_params": {},
+      "individual_job_params": {
+        "destination_data_path": "/mnt/unified/drug_dev/study_event",
+        "source_file_path": "/mnt/landing/drug_dev/study_event",
+        "query_file_path": "config/sql/unified/study_event.sql",
+        "unified_table_name": "study_event",
+        "application": "drug_dev"
+      }
+    },
+    {
+      "job_name": "study_country_milestone",
+      "schedule": "",
+      "data_quality_check": "Y",
+      "job_type": "HIST",
+      "tag_params": {},
+      "individual_job_params": {
+        "destination_data_path": "/mnt/unified/drug_dev/study_country_milestone",
+        "source_file_path": "/mnt/landing/drug_dev/study_country,/mnt/landing/drug_dev/study_country_event",
+        "query_file_path": "config/sql/unified/study_country_milestone.sql",
+        "unified_table_name": "study_country_milestone",
+        "application": "drug_dev"
+      }
+    },
+    {
+      "job_name": "site_monitoring_detail",
+      "schedule": "",
+      "data_quality_check": "Y",
+      "job_type": "HIST",
+      "tag_params": {},
+      "individual_job_params": {
+        "destination_data_path": "/mnt/unified/drug_dev/site_monitoring_detail",
+        "source_file_path": "/mnt/landing/drug_dev/study_site,/mnt/landing/drug_dev/monitoring_visit",
+        "query_file_path": "config/sql/unified/site_monitoring_detail.sql",
+        "unified_table_name": "site_monitoring_detail",
+        "application": "drug_dev"
+      }
+    },
+    {
+      "job_name": "customer_master",
+      "schedule": "",
+      "data_quality_check": "Y",
+      "job_type": "HIST",
+      "tag_params": {},
+      "individual_job_params": {
+        "destination_data_path": "/mnt/unified/drug_dev/customer_master",
+        "source_file_path": "/mnt/common/customer/customer_master",
+        "query_file_path": "config/sql/unified/customer_master.sql",
+        "unified_table_name": "customer_master",
+        "application": "drug_dev"
+      }
+    },
+    {
+      "job_name": "organization_hierarchy",
+      "schedule": "",
+      "data_quality_check": "Y",
+      "job_type": "HIST",
+      "tag_params": {},
+      "individual_job_params": {
+        "destination_data_path": "/mnt/unified/drug_dev/organization_hierarchy",
+        "source_file_path": "/mnt/common/customer/organization_hierarchy",
+        "query_file_path": "config/sql/unified/organization_hierarchy.sql",
+        "unified_table_name": "organization_hierarchy",
+        "application": "drug_dev"
+      }
+    }
+  ]
+}
