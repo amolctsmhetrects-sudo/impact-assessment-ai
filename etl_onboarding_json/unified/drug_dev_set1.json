@@ -4,8 +4,8 @@
   "description":"",
   "parallel_job_limit":"10",
   "notifications": {
-    "success" : [x@gmail.com,y@gmail.com],
-    "failure" : [x@gmail.com,y@gmail.com]
+    "success" : ["x@gmail.com,y@gmail.com"],
+    "failure" : ["x@gmail.com,y@gmail.com"]
   },
   "cluster": {
     "cluster_type":"",
