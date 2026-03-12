@@ -1,0 +1,19 @@
+SELECT
+    study_id,
+    study_code,
+    study_title,
+    study_phase,
+    therapeutic_area,
+    indication,
+    drug_name,
+    molecule_type,
+    sponsor_name,
+    study_status,
+    study_start_date,
+    study_end_date,
+    target_enrollment,
+    actual_enrollment,
+    protocol_version,
+    created_date,
+    modified_date
+FROM landing.drug_studies

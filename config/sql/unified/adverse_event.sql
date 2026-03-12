@@ -1,0 +1,19 @@
+SELECT
+    adverse_event_id,
+    study_id,
+    patient_id,
+    study_site_id,
+    event_term,
+    event_category,
+    severity,
+    seriousness,
+    onset_date,
+    resolution_date,
+    outcome,
+    causality_assessment,
+    action_taken,
+    reporter_type,
+    reported_date,
+    created_date,
+    modified_date
+FROM landing.adverse_event
